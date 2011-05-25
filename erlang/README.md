@@ -26,9 +26,4 @@ accepted.
                       -d  - install docs
                       vsn - Erlang version to install (e.g., R14B03)
 
->                      This script should be run as root unless the user
-                      has permissions to write to the the /usr/local
-                      directory. The source tarballs are retrieved to
-                      /usr/local/src and are unpacked into their own
-                      directories under /usr/local/src. Care should be
-                      taken to ensure that /usr/local/bin is in the path.
+This script should be run as root unless the user has permissions to write to the the /usr/local directory. The source tarballs are retrieved to /usr/local/src and are unpacked into their own directories under /usr/local/src. Care should be taken to ensure that /usr/local/bin is in the path.

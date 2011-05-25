@@ -1,4 +1,4 @@
-# Erlang Scripts - A collection of Erlang scripts #
+# Erlang Scripts - A collection of Erlang-related scripts #
 
 This directory contains a bunch of scripts that I wrote for my own
 convenience that may or may not be useful to others. Feel free to

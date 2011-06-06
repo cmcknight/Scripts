@@ -1,10 +1,10 @@
-######################################################################
-# This script retrieves, builds and installs the specified version of
-# Erlang. Run as root unless you have chowned the /usr/local directory
-# to your own user, add yourself to a common group and chgrp the local
-# directory, or change the permissions recursively on /usr/local.
-######################################################################
-#!/usr/bin/env bash
+###################################################################################
+# This script retrieves, builds and installs the specified version of Erlang
+# Run as root unless you have chowned the /usr/local subdirectory to your own user,
+# add yourself to a common group and chgrp the local directory, or change the
+# permissions recursively on /usr/local.
+###################################################################################
+#!/bin/bash
 
 USAGE="Usage: `basename $0` [-w [32 | 64] ] [-d] Version"
 WORDSIZE="32"   #default to 32-bit word size
@@ -31,7 +31,7 @@ parse_options() {
             "64" ) case $OSNAME in
                    "Darwin" ) WORD_SIZE_BUILD_FLAG="--enable-darwin-64bit";;
                    "Linux"  ) WORD_SIZE_BUILD_FLAG="--enable-m64-build";;
-                         *  ) echo "Unsupported OS"; exit 0
+                         *    ) echo "Unsupported OS"; exit 0
                    esac
                    BUILD_TYPE="Building 64-bit version of Erlang"
                     ;;
@@ -151,7 +151,7 @@ echo $DOC_MSG
 clean_up_erlang_directory
 download_erlang
 build_erlang
-housekeeping	# <=== Not needed for automatic installs
+#housekeeping	<=== Not needed for automatic installs
 build_dialyzer
 
 if [ "$INSTALL_DOCS" -eq 1 ]

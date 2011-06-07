@@ -1,9 +1,9 @@
-###################################################################################
+####################################################################
 # This script retrieves, builds and installs the specified version of Erlang
 # Run as root unless you have chowned the /usr/local subdirectory to your own user,
 # add yourself to a common group and chgrp the local directory, or change the
 # permissions recursively on /usr/local.
-###################################################################################
+####################################################################
 #!/bin/bash
 
 USAGE="Usage: `basename $0` [-w [32 | 64] ] [-d] Version"

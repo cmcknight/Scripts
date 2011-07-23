@@ -1,0 +1,42 @@
+#!/usr/bin/env expect --
+
+# save the command line args into variables
+set sitename  [lindex $argv 0]
+set srcdir    [lindex $argv 1]
+set filenames [lindex $argv 2]
+
+################################################################
+# ensure that the user has passed all of the necessary arguments
+################################################################
+if {$argc < 3} {
+    puts "Usage: download.exp sitename username srcdir filenames"
+    exit
+}
+
+if {[string length $sitename] == 0} {
+    puts "Usage: download.exp sitename username srcdir filenames"
+    exit
+}
+
+if {[string length $srcdir] == 0} {
+    puts "Usage: download.exp sitename username srcdir filenames"
+    exit
+}
+
+if {[string length $filenames] == 0} {
+    puts "Usage: download.exp sitename username srcdir filenames"
+    exit
+}
+
+################################################################
+# Connect to the site and retrieve the files
+################################################################
+spawn ftp "-a" $sitename
+expect "ftp> "
+send "cd $srcdir\r"
+expect "ftp> "
+send "prompt\r"
+expect "ftp> "
+send "mget $filenames\r"
+expect "ftp> "
+send "quit\r"

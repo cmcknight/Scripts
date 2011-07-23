@@ -8,22 +8,10 @@ set filenames [lindex $argv 2]
 ################################################################
 # ensure that the user has passed all of the necessary arguments
 ################################################################
-if {$argc < 3} {
-    puts "Usage: download.exp sitename username srcdir filenames"
-    exit
-}
-
-if {[string length $sitename] == 0} {
-    puts "Usage: download.exp sitename username srcdir filenames"
-    exit
-}
-
-if {[string length $srcdir] == 0} {
-    puts "Usage: download.exp sitename username srcdir filenames"
-    exit
-}
-
-if {[string length $filenames] == 0} {
+if {$argc < 3 ||
+    [string length $sitename]  == 0 ||
+    [string length $srcdir]    == 0 ||
+    [string length $filenames] == 0} {
     puts "Usage: download.exp sitename username srcdir filenames"
     exit
 }

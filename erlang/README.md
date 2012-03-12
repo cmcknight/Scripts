@@ -1,8 +1,8 @@
 # Erlang Scripts - A collection of Erlang-related scripts #
 
-This directory contains a bunch of scripts that I wrote for my own
-convenience that may or may not be useful to others. Feel free to
-use them if you like, but many of the scripts run as the root
+This directory will contain a bunch of scripts that I wrote for my 
+own convenience that may or may not be useful to others. Feel free 
+to use them if you like, but many of the scripts run as the root
 operator so unless you know what you're doing, leave'em alone. Use
 of the scripts in the archive does not imply any responsibility or
 liability on the part of the author if you brick your machine.
